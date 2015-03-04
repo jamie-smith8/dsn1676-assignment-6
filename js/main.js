@@ -11,7 +11,7 @@ var $btnBounce = $('.btn-bounce');
 var $circle = $('.circle');
 
 var $btnAppend = $('.btn-append');
-var $list = $('list');
+var $list = $('.list');
 
 $btnShowHide.on('click', function () {
     $box.toggleClass('js-show-hide');
@@ -34,5 +34,7 @@ $circle.on('webkitAnimationEnd animationend', function () {
 });
 
 $btnAppend.on('click', function () {
-    $list.addClass('js-btn-append');
+    var $li = $('<li>New list item</li>');
+    $list.prepend($li);
+    $li.addClass('js-btn-append');
 });
